@@ -35,7 +35,8 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.onlyofficeee.rule=Host(`onlyoffice2.eakassociates.com`)
-      - traefik.http.routers.onlyofficeee.entrypoints=web
+      - traefik.http.routers.onlyofficeee.entrypoints=websecure
+      - traefik.http.routers.onlyofficeee.tls.certResolver=letsencrypt
       - traefik.http.services.onlyofficeee.loadbalancer.server.port=80
        
   onlyoffice-rabbitmq:
