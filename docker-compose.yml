@@ -34,7 +34,7 @@ services:
       - dokploy-network
     labels:
       - traefik.enable=true
-      - traefik.http.routers.onlyofficeee.rule=Host(`onlyoffice.eakassociates.com`)
+      - traefik.http.routers.onlyofficeee.rule=Host(`onlyoffice2.eakassociates.com`)
       - traefik.http.routers.onlyofficeee.entrypoints=web"
       - traefik.http.services.onlyofficeee.loadbalancer.server.port=80
        
