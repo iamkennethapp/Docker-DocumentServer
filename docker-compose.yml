@@ -34,9 +34,10 @@ services:
       - dokploy-network
     labels:
       - traefik.enable=true
-      - traefik.http.routers.onlyoffice.rule=Host(`onlyoffice.eakassociates.com`)
-      - traefik.http.routers.onlyoffice.entrypoints=web"
-      - traefik.http.services.onlyoffice.loadbalancer.server.port=80
+      - traefik.http.routers.onlyofficee.rule=Host(`onlyoffice.eakassociates.com`)
+      - traefik.http.routers.onlyofficee.entrypoints=websecure"
+      - "traefik.http.routers.onlyofficee.tls.certResolver=letsencrypt"
+      - traefik.http.services.onlyofficee.loadbalancer.server.port=80
        
   onlyoffice-rabbitmq:
     container_name: onlyoffice-rabbitmq
